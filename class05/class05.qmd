@@ -1,0 +1,205 @@
+---
+title: "Class 5: Data Viz with ggplot"
+author: "Sawyer (PID: A69034741)"
+format: pdf
+editor: visual
+---
+
+R has lot's of ways to make figures and graphs in particular. One that comes with R out of the box is called **"base" R** - the `plot()` function.
+
+```{r}
+plot(cars)
+```
+
+A very popular package in this area is called **ggplot2**.
+
+Before I can use any add-on package like this I must install it with the `install.packages("ggplot2")` command/function.
+
+Then to use the package I need to load it with a `library(ggplot2)` call.
+
+```{r}
+# install.packages("ggplot2")
+library(ggplot2)
+ggplot(cars) +
+  aes(x=speed, y=dist) +
+  geom_point()
+```
+
+For "simple" plots like this one base R code will be much shorter than ggplot code.
+
+Let's fit a model and show it on my plot:
+
+```{r}
+library(ggplot2)
+ggplot(cars) +
+  aes(x=speed, y=dist) +
+  geom_point() +
+  geom_smooth()
+```
+
+Every ggplot has at least 3 layers
+
+-   **data** (data.frame with the numbers or stuff you want to plot)
+-   **aes**thetics (mapping of your data columns to your plot)
+-   **geom**etries (there are tones of these, basics are `geom_point()`, `geom_line()`, `geom_col()`)
+
+```{r}
+head(mtcars)
+```
+
+Make me a ggplot of the 'mtcars' data set using `mpg` vs `disp` and set the size of the points to the `hp` and set the color to `am`
+
+```{r}
+library(ggplot2)
+ggplot(mtcars) +
+  aes(x=mpg, y=disp, size=hp, col=am) +
+  geom_point()
+```
+
+```{r}
+library(ggplot2)
+ggplot(mtcars) +
+  aes(x=mpg, y=disp, size=hp, col=am) +
+  geom_point(col='blue')
+```
+
+```{r}
+library(ggplot2)
+ggplot(mtcars) +
+  aes(x=mpg, y=disp, size=hp, col=am) +
+  geom_point() +
+  facet_wrap(~am)
+```
+
+```{r}
+library(ggplot2)
+ggplot(mtcars) +
+  aes(x=mpg, y=disp, size=hp, col=rownames(mtcars)) +
+  geom_point() +
+  facet_wrap(~am)
+```
+
+```{r}
+rownames(mtcars)
+```
+
+```{r}
+library(ggrepel)
+ggplot(mtcars) +
+  aes(x=mpg, y=disp, label=rownames(mtcars), col=am) +
+  geom_point(col='blue') +
+  facet_wrap(~am) +
+  geom_text_repel()
+```
+
+## Gene expression plot
+
+```{r}
+url <- "https://bioboot.github.io/bimm143_S20/class-material/up_down_expression.txt"
+genes <- read.delim(url)
+head(genes)
+```
+
+```{r}
+colnames(genes)
+```
+
+```{r}
+ncol(genes)
+```
+
+```{r}
+library(ggplot2)
+p <- ggplot(genes) +
+      aes(x=Condition1, y=Condition2, color=State) +
+      geom_point()
+p + scale_colour_manual(values=c("blue","gray","red")) +
+    labs(title="Gene Expresion Changes Upon Drug Treatment",
+         x="Control (no drug) ",
+         y="Drug Treatment")
+```
+
+```{r}
+nrow(genes)
+```
+
+There are `r nrow(genes)` genes in this dataset
+
+```{r}
+unique(genes$State)
+```
+
+The `table()` function is a super useful utility to tell me how many entries of each type there are.
+
+```{r}
+round(table (genes$State) / nrow(genes), 4)
+```
+
+The functions `nrow()`, `ncol()`, and `table()` are ones I want you to know.
+
+```{r}
+library(dplyr)
+library(gapminder)
+
+
+gapminder_2007 <- gapminder %>% filter(year==2007)
+
+ggplot(gapminder_2007) +
+  aes(x=gdpPercap, y=lifeExp) +
+  geom_point(alpha=0.5)
+```
+
+```{r}
+ggplot(gapminder_2007) +
+  aes(x=gdpPercap, y=lifeExp, color=continent, size=pop) +
+  geom_point(alpha=0.5)
+```
+
+```{r}
+ggplot(gapminder_2007) + 
+  aes(x = gdpPercap, y = lifeExp, size = pop) +
+  geom_point(alpha=0.5)
+```
+
+```{r}
+gapminder_1957 <- gapminder %>% filter(year==1957)
+
+ggplot(gapminder_1957) + 
+  aes(x = gdpPercap, y = lifeExp, color=continent,
+                 size = pop) +
+  geom_point(alpha=0.7) + 
+  scale_size_area(max_size = 10) 
+```
+
+```{r}
+gapminder_1957 <- gapminder %>% filter(year==1957 | year==2007)
+
+ggplot(gapminder_1957) + 
+  geom_point(aes(x = gdpPercap, y = lifeExp, color=continent,
+                 size = pop), alpha=0.7) + 
+  scale_size_area(max_size = 10) +
+  facet_wrap(~year)
+```
+
+```{r}
+library(gapminder)
+library(gganimate)
+
+# Setup nice regular ggplot of the gapminder data
+ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  scale_colour_manual(values = country_colors) +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  # Facet by continent
+  facet_wrap(~continent)
+  # Here comes the gganimate specific bits
+ # labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +
+ # transition_time(year) +
+ # shadow_wake(wake_length = 0.1, alpha = FALSE)
+```
+
+
+```{r}
+head(gapminder)
+```
