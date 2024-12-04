@@ -3,4 +3,4 @@ My class work from [BGGN213](https://bioboot.github.io/bggn213_F24/) at UC San D
 
 - Class 4: [Intro to R data structures](https://github.com/sawyerrandles/bggn213_github/blob/main/class04/class04.html)
 - Class 5: [All about GGPLOT](https://github.com/sawyerrandles/bggn213_github/blob/main/class05/class05.qmd)
-- Class 6: [R Functions]()
+- Class 6: [R Functions](https://github.com/sawyerrandles/bggn213_github/blob/main/class06/class06.qmd)
