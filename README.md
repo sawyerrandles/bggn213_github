@@ -9,8 +9,7 @@ My class work from [BGGN213](https://bioboot.github.io/bggn213_F24/) at UC San D
 
 - **Class 7**: [Machine Learning](https://github.com/sawyerrandles/bggn213_github/blob/main/class07/class07.md)
 
-
-- **Class 8**: [Machine Learning Mini Project]()
+- **Class 8**: [Machine Learning Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class08/class08.md)
 
 - **Class 9**: [Halloween Candy Mini Project]()
 
