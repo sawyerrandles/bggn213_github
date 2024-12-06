@@ -13,7 +13,7 @@ My class work from [BGGN213](https://bioboot.github.io/bggn213_F24/) at UC San D
 
 - **Class 9**: [Halloween Candy Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class09/class09.md)
 
-- **Class 13**: [Transcriptomics, RNA-Seq analysis, and the interpretation of gene lists(https://github.com/sawyerrandles/bggn213_github/blob/main/class13/class13.md)
+- **Class 13**: [Transcriptomics, RNA-Seq analysis, and the interpretation of gene lists](https://github.com/sawyerrandles/bggn213_github/blob/main/class13/class13.md)
 
 - **Class 14**: [RNAseq Mini Project - DESeq2 and Functional Annotation](https://github.com/sawyerrandles/bggn213_github/blob/main/class14/class14.md)
 
