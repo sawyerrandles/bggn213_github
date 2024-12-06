@@ -1,9 +1,13 @@
 # BGGN213
-My class work from [BGGN213](https://bioboot.github.io/bggn213_F24/) at UC San Diego.
+My repository from [BGGN213](https://bioboot.github.io/bggn213_F24/) at UC San Diego.
+
+*Introductory Material: Working with R*
 
 - **Class 5**: [All about GGPLOT](https://github.com/sawyerrandles/bggn213_github/blob/main/class05/class05.md)
 
 - **Class 6**: [R Functions](https://github.com/sawyerrandles/bggn213_github/blob/main/class06/class06.md)
+
+*Using R and Other Tools for Bioinformatic Analysis*
 
 - **Class 7**: [Machine Learning](https://github.com/sawyerrandles/bggn213_github/blob/main/class07/class07.md)
 
