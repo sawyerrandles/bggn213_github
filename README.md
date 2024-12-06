@@ -17,4 +17,4 @@ My class work from [BGGN213](https://bioboot.github.io/bggn213_F24/) at UC San D
 
 - **Class 14**: [RNAseq Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class14/class14.md)
 
-- **Class 15**: [Pertussis Vaccination Mini Project]()
+- **Class 15**: [Pertussis Vaccination Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class15/class15.md)
