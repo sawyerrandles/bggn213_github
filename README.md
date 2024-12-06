@@ -9,12 +9,12 @@ My class work from [BGGN213](https://bioboot.github.io/bggn213_F24/) at UC San D
 
 - **Class 7**: [Machine Learning](https://github.com/sawyerrandles/bggn213_github/blob/main/class07/class07.md)
 
-- **Class 8**: [Machine Learning Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class08/class08.md)
+- **Class 8**: [Unsupervised Learning Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class08/class08.md)
 
 - **Class 9**: [Halloween Candy Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class09/class09.md)
 
-- **Class 13**: [RNAseq with DESeq2](https://github.com/sawyerrandles/bggn213_github/blob/main/class13/class13.md)
+- **Class 13**: [Transcriptomics with DESeq2](https://github.com/sawyerrandles/bggn213_github/blob/main/class13/class13.md)
 
 - **Class 14**: [RNAseq Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class14/class14.md)
 
-- **Class 15**: [Pertussis Vaccination Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class15/class15.md)
+- **Class 15**: [Investigating Pertussis Resurgence Mini Project](https://github.com/sawyerrandles/bggn213_github/blob/main/class15/class15.md)
